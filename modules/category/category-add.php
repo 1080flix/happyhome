@@ -1,0 +1,29 @@
+<?php
+$base_path = '../../';
+include($base_path . 'config/check_login.php');
+include($base_path . 'includes/header.php');
+include($base_path . 'includes/sidebar.php');
+?>
+
+<div class="content-wrapper">
+  <div class="content-header">
+    <div class="container-fluid d-flex justify-content-between align-items-center">
+      <h1 class="m-0">เพิ่มหมวดหมู่สินค้า</h1>
+      <a href="category-list.php" class="btn btn-secondary">
+        <i class="fas fa-arrow-left"></i> ย้อนกลับ
+      </a>
+    </div>
+  </div>
+
+  <section class="content">
+    <div class="container-fluid">
+      <?php
+      // สำหรับฟอร์ม add ไม่ต้องมีข้อมูล category
+      $category = [];
+      include('category-form.php');
+      ?>
+    </div>
+  </section>
+</div>
+
+<?php include($base_path . 'includes/footer.php'); ?>
